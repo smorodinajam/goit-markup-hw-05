@@ -475,6 +475,7 @@ body {
 }
 .footer-soc-icon {
   fill: var(--primary-white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -483,42 +484,6 @@ body {
 .footer-soc-link:hover .footer-soc-icon,
 .footer-soc-link:focus .footer-soc-icon {
   fill: var(--primary-white-color);
-}
-
-/*------------PORTFOLIO--------------*/
-/*----------FILTER-BUTTON------------*/
-.portfolio-page {
-  font-family: 'Roboto', sans-serif;
-}
-.portfolio-btn-list {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-.portfolio-btn,
-.portfolio-list-item,
-.portfolio-list-text {
-  font-family: 'Roboto', sans-serif;
-}
-.portfolio-btn {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  letter-spacing: var(--typical-letter-spacing);
-  border-radius: 4px;
-  border: 1px solid transparent;
-  min-width: 73px;
-  padding: 6px 22px;
-  color: var(--title-color);
-  background: #f5f4fa;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*------------Modal--------------*/
@@ -583,6 +548,7 @@ body {
   color: var(--title-color);
 }
 .input-field {
+  position: relative;
   margin-bottom: 10px;
 }
 .input-field:not(:last-child) {
@@ -601,7 +567,8 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 12px;
+  padding-left: 42px;
+  padding-right: 12px;
 }
 .form-input::placeholder,
 .comment-text {
@@ -618,7 +585,15 @@ body {
   border-radius: 4px;
   resize: none;
 }
+.modal-contacts-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  /*transform: translateY(-50%);*/
+}
+
 .checkbox {
+  position: absolute;
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -650,6 +625,42 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
+}
+
+/*------------PORTFOLIO--------------*/
+/*----------FILTER-BUTTON------------*/
+.portfolio-page {
+  font-family: 'Roboto', sans-serif;
+}
+.portfolio-btn-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio-btn,
+.portfolio-list-item,
+.portfolio-list-text {
+  font-family: 'Roboto', sans-serif;
+}
+.portfolio-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: var(--typical-letter-spacing);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  min-width: 73px;
+  padding: 6px 22px;
+  color: var(--title-color);
+  background: #f5f4fa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*----------Pictures------------*/
