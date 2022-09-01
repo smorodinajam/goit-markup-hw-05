@@ -397,7 +397,7 @@ body {
   align-items: center;
   background-color: transparent;
   fill: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
@@ -434,6 +434,7 @@ body {
 .address-mail-link,
 .address-tel-link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-text {
   margin-bottom: 9px;
